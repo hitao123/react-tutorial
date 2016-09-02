@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>React tutorial</title>
+	<script type="text/javascript" src="../build/react-15.2.0-min.js"></script>
+	<script type="text/javascript" src="../build/reactdom-15.2.0-min.js"></script>
+	<script type="text/javascript" src="../build/babel-core-5.6.16-browser.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+</body>
+	<script type="text/babel">
+		var LinkButton = React.createClass({
+			getInitialState: function(){
+				return {like : false};
+			},
+			handleClick: function(){
+				this.setState ({like: !this.state.like});
+			},
+			render:　function(){
+				var text = this.state.like ? 'like' : 'dislike';
+				return <p onClick={this.handleClick}>toggle {text}</p>
+			}
+		});
+
+		ReactDOM.render(
+			<LinkButton />,
+			document.getElementById('example')
+		);
+	</script>
+</html>

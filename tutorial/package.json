@@ -1,0 +1,23 @@
+{
+  "name": "react-tutorial",
+  "version": "1.0.0",
+  "description": "learn react",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.hitao123/React.git"
+  },
+  "keywords": [
+    "react",
+    "tutorial",
+    "example"
+  ],
+  "author": "huahaitao",
+  "license": "ISC"
+}

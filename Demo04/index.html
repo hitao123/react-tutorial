@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>React tutorial</title>
+	<script type="text/javascript" src="../build/react-15.2.0-min.js"></script>
+	<script type="text/javascript" src="../build/reactdom-15.2.0-min.js"></script>
+	<script type="text/javascript" src="../build/babel-core-5.6.16-browser.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+</body>
+	<script type="text/babel">
+		var NodeLists = React.createClass({
+		render:　function(){
+			return (
+					<ol>
+						{
+							React.Children.map(this.props.children,function(child){
+								return <li>{child}</li>;
+							})
+						}
+					</ol>
+			);
+		}
+		});
+		ReactDOM.render(
+			<NodeLists>
+				<span>hello ketty</span>
+				<span>hello react</span>
+			</NodeLists>,
+			document.getElementById('example')
+		);
+		console.log(NodeLists);
+	</script>
+</html>
