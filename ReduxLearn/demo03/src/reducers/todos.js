@@ -7,6 +7,7 @@ const todo = (state, action) => {
                 completed: false
             }
         case 'TOGGLE_TODO':
+            //id 是在 reducer 产生。用的是ADD_TODO , action.id 是传给action的
             if(state.id !== action.id){
                 return state
             }
@@ -18,6 +19,9 @@ const todo = (state, action) => {
             return state
     }
 }
+// 这里返回一个列表状态，初始状态为空
+// state = [{id: 1,text: "qwq", complete: true},{...}]
+// 这里遇到一个疑问的地方就是 ...state 数组的扩展运算符
 
 const todos = (state = [], action) => {
     switch(action.type) {

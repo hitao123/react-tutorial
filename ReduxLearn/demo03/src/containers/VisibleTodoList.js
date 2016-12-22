@@ -13,8 +13,8 @@ const getVisibleTodos = (todos, filter) => {
         default: throw new Error('Unknow filter:' + filter)
     }
 }
-
-const mapStateToProps = (state) => ({
+//每当状态变化，这里都会被调用 相当于订阅 state.subscribe()
+const mapStateToProps = (state,ownProps) => ({
     todos: getVisibleTodos(state.todos, state.visibilityFilter)
 })
 

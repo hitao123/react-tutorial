@@ -8,6 +8,7 @@ import reducer from './reducers'
 
 const store = createStore(reducer)
 
+//使用Provider 将store暴露给组件
 render(
 	<Provider store={store}>
 		<App />

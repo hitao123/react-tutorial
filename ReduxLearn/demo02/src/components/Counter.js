@@ -2,12 +2,13 @@ import React, { Component, PropTypes } from 'react'
 
 class Counter extends Component {
 	//ES7 静态属性，ES6只要静态方法，不需要实例化可以直接调用
+	//验证项
 	static PropTypes = {
 		value: PropTypes.number.isRequired,
 		onIncrement: PropTypes.func.isRequired,
 		onDecrement: PropTypes.func.isRequired
 	}
-
+	//自定义函数
 	IncrementByOdd = () => {
 		if(this.props.value % 2 !== 0){
 			this.props.onIncrement();
@@ -17,6 +18,7 @@ class Counter extends Component {
 	IncrementAsync = () => {
 		setTimeout(this.props.onIncrement,2000);
 	}
+	//使用es6对象解构赋值
 	render() {
 		const {value, onDecrement, onIncrement} = this.props;
 		return (
