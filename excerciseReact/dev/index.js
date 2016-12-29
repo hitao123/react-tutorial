@@ -16,5 +16,5 @@ ReactDOM.render(
     <HelloWorld greetTarget="Bono"/>
     <HelloWorld greetTarget="Catwoman"/>
   </div>,
-  document.getElementById("#container")
+  document.getElementById("container")
 );
