@@ -15,6 +15,7 @@ module.exports = {
         publicPath: "/output/"
         // publicPath is used as the href or url()
         //,publicPath: ...
+        //chunkFilename: [name].[chunkhash:5].chunk.js //按需加载组件
     },
     //模块选项
     module: {

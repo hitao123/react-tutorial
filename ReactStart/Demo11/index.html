@@ -33,6 +33,7 @@
 					var repoList = repos.map(function(repo,index){
 						return (
 							<li key={index}>
+								<h1>{repo.full_name}</h1>
 								<a href={repo.html_url}>({repo.stargazers_count})</a>
 								<br/> {repo.description} 
 							</li>
