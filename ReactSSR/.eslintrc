@@ -1,0 +1,26 @@
+{
+  "extends": "eslint-config-alloy/react",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "react/prop-types": 0,
+    "indent": [
+        "error",
+        2,
+        {
+          "SwitchCase": 1,
+          "flatTernaryExpressions": true
+        }
+    ],
+    "react/jsx-indent": [
+        "error",
+        2
+    ],
+    "react/jsx-indent-props": [
+        "error",
+        2
+    ]
+  }
+}
